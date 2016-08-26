@@ -4,7 +4,6 @@ var ReactDOM = require('react-dom');
 var Image = require('./image');
 
 var Gallery = function(props) {
-	console.log(props.images);
     var images = props.images.map(function(image, index) {
         return <Image url={image.url} description={image.description} key={index}/>;
     });
@@ -26,7 +25,7 @@ var collection = [
 ];
 
 module.exports = Gallery;
-
-document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(<Gallery  images={collection}/>, document.getElementById('app'));
-});
+//document.ready from jquery
+// document.addEventListener('DOMContentLoaded', function() {
+    // ReactDOM.render(<Gallery  images={collection}/>, document.getElementById('app'));
+// });
